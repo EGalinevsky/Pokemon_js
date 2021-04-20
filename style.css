@@ -35,13 +35,16 @@ body {
 }
 
 .control {
-    width: 320px;
-    height: 260px;
+    width: 320px;    
     position: relative;
-    margin: 20px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.control:last-child{
+    margin-top: 90px;
 }
 
 .playground {

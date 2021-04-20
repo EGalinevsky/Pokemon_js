@@ -1,4 +1,6 @@
 const $btn = document.getElementById('btn-kick')
+const $btn_fatality = document.getElementById('btn-fatality')
+
 
 const character ={
     name: 'Picachu',
@@ -22,6 +24,9 @@ $btn.addEventListener('click' , ()=>{
     changeHP(random(20), enemy)
     
 })
+$btn_fatality.addEventListener('click', ()=>{
+    changeHP(fatalityRandom(20), enemy)
+})
 
 init = () =>{
     console.log('Start game')    
@@ -42,6 +47,7 @@ renderProgressBarHP = (person) => {
     person.elProgress.style.width = person.damageHP +'%'
 }
 
+
 changeHP = (count, persone) =>{
 
     if (persone.damageHP < count) {
@@ -57,6 +63,9 @@ changeHP = (count, persone) =>{
 
 random = (num) =>{
   return Math.ceil(Math.random() * num)
+}
+fatalityRandom = (num) =>{
+    return Math.ceil(Math.random() * num*3)
 }
 
 init()
